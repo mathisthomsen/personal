@@ -1,0 +1,130 @@
+.header-wrapper
+    position: relative
+    overflow: hidden
+
+    .head-img
+        background:
+            image: url("../assets/img/bridge.jpg")
+            size: cover
+            position: bottom center
+        height: $head_height
+
+        @media screen and (min-width: 551px)
+            height: ($head_height + 50)
+
+        @media screen and (min-width: 651px)
+            height: ($head_height + 100)
+
+        @media screen and (min-width: 701px)
+            height: ($head_height + 150)
+
+        @media screen and (min-width: 751px)
+            height: ($head_height + 200)
+
+        @media screen and (min-width: 821px)
+            height: ($head_height + 250)
+
+        @media screen and (min-width: 901px)
+            height: ($head_height + 300)
+
+        @media screen and (min-width: 1001px)
+            height: ($head_height + 400)
+
+        svg
+            fill: #846582
+            opacity: 0.4
+            position: relative
+            top: 45%
+            height: 175px
+            width: 175px
+            transition: all ease-in-out 200ms
+
+            &:hover
+                fill: #fe681d
+                opacity: 0.6
+
+            @media screen and (max-width: 701px)
+                display: none
+
+    .lead-wrapper
+        overflow: hidden
+        width: $profile
+        height: $profile
+        border-radius: 50%
+        display: block
+        position: relative
+        left: 50%
+        transform: translate(-50%, -50%)
+        box-shadow: 0 0 0 5px white, 0 0 0 6px $highlight
+        margin: 0 0 1.5rem 0
+        transition: box-shadow ease-in-out 400ms
+
+        &:hover
+            box-shadow: 0 0 0 5px $highlight, 0 0 0 6px $highlight
+
+        img
+            width: $profile
+            height: auto
+
+        @media screen and (min-width: 701px)
+            left: 20px
+            transform: translate(0, -50%)
+            float: left
+
+    .heading
+        display: block
+        margin: 0 auto
+        position: relative
+        top: -($profile/2)
+
+        @media screen and (min-width: 701px)
+            float: left
+            margin: 0 0
+            position: relative
+            top: -($profile/2)
+            text-align: left
+            left: 40px
+
+            h1, h2
+                color: $light
+                padding: 0 0 0.4rem 0
+
+            //h2
+                text-shadow: 1px 1px $dark
+
+
+.content
+    position: relative
+    top: -($profile)
+    left: ($profile + 43)
+    clear: left
+    //float: right
+    float: none
+    //padding: 0 1rem 0 1rem
+    text-align: left
+
+    @media screen and (max-width: 701px)
+        top: -($profile/2)
+        left: 0
+        text-align: center
+        padding-top: 1rem
+
+    ul
+        list-style-type: none
+        font-size: 1.5rem
+
+        a
+            text-decoration: none
+            color: $dark
+
+        .symbol
+            font-size: 2rem
+            color: $highlight
+            opacity: 0.6
+            transition: opacity ease-in-out 200ms
+
+            &:hover
+                opacity: 1
+
+        .row
+            display: inline
