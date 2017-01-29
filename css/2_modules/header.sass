@@ -46,85 +46,92 @@
             @media screen and (max-width: 701px)
                 display: none
 
-    .lead-wrapper
-        overflow: hidden
-        width: $profile
-        height: $profile
-        border-radius: 50%
-        display: block
+    .group
+        display: flex
+        justify-content: center
+        flex-direction: column
         position: relative
-        left: 50%
-        transform: translate(-50%, -50%)
-        box-shadow: 0 0 0 5px white, 0 0 0 6px $highlight
-        margin: 0 0 1.5rem 0
-        transition: box-shadow ease-in-out 400ms
+        top: -($profile/2)
+        margin-bottom: -($profile/2)
 
-        &:hover
-            box-shadow: 0 0 0 5px $highlight, 0 0 0 6px $highlight
+        @media screen and (min-width: 701px)
+            flex-direction: row
+            justify-content: flex-start
+            margin-left: 3rem
 
-        img
+        .lead-wrapper
+            margin: 0 auto 1.5rem auto
+            overflow: hidden
             width: $profile
-            height: auto
-
-        @media screen and (min-width: 701px)
-            left: 20px
-            transform: translate(0, -50%)
-            float: left
-
-    .heading
-        display: block
-        margin: 0 auto
-        position: relative
-        top: -($profile/2)
-
-        @media screen and (min-width: 701px)
-            float: left
-            margin: 0 0
+            height: $profile
+            border-radius: 50%
             position: relative
-            top: -($profile/2)
-            text-align: left
-            left: 40px
+            box-shadow: 0 0 0 5px white, 0 0 0 6px $highlight
+            transition: box-shadow ease-in-out 400ms
 
-            h1, h2
-                color: $light
-                padding: 0 0 0.4rem 0
+            @media screen and (min-width: 701px)
+                margin: 0 0 1.5rem 0
 
-            //h2
-                text-shadow: 1px 1px $dark
+                &:hover
+                    box-shadow: 0 0 0 5px $highlight, 0 0 0 6px $highlight
 
+            img
+                width: $profile
+                height: auto
 
-.content
-    position: relative
-    top: -($profile)
-    left: ($profile + 43)
-    clear: left
-    //float: right
-    float: none
-    //padding: 0 1rem 0 1rem
-    text-align: left
+        .subgroup
+            display: flex
+            justify-content: center
+            flex-direction: column
 
-    @media screen and (max-width: 701px)
-        top: -($profile/2)
-        left: 0
-        text-align: center
-        padding-top: 1rem
+            @media screen and (min-width: 701px)
+                margin: 0 0 0 2rem
+                justify-content: space-around
 
-    ul
-        list-style-type: none
-        font-size: 1.5rem
+            .heading
+                display: block
+                margin: 0 auto 1.7rem auto
 
-        a
-            text-decoration: none
-            color: $dark
+                @media screen and (min-width: 701px)
+                    margin: 0 0 1.7rem 0
 
-        .symbol
-            font-size: 2rem
-            color: $highlight
-            opacity: 0.6
-            transition: opacity ease-in-out 200ms
+                    h1, h2
+                        color: $light
+                        text-align: left
 
-            &:hover
-                opacity: 1
+            .content
+                display: block
+                margin: 0 auto
+                text-align: left
 
-        .row
-            display: inline
+                ul
+                    list-style-type: none
+                    font-size: 1.5rem
+                    text-align: center
+
+                    a
+                        text-decoration: none
+                        color: $dark
+
+                    .symbol
+                        font-size: 3rem
+                        color: $highlight
+                        opacity: 0.6
+                        transition: opacity ease-in-out 200ms
+
+                        @media screen and (min-width: 701px)
+                            &:hover
+                                opacity: 1
+
+                    @media screen and (max-width: 701px)
+                        .mail
+                            border: 1px solid $highlight
+                            padding: 0.7rem 1rem
+                            border-radius: 50px
+                            //background-color: $light
+                            margin-bottom: 0.5rem
+                            box-shadow: 0 0 0 5px white, 0 0 0 6px $highlight
+
+                    .row
+                        display: inline
+                        padding: 0 0.5rem
